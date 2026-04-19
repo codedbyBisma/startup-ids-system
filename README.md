@@ -110,10 +110,24 @@ Learning intrusion detection concepts
 
 Real-time threat observation
 
-Built By
+---
 
-Bisma Khushi — Cybersecurity Student & Freelance Security Developer
+## Contributing
 
-bismakhushi07@gmail.com
+If you'd like to improve this IDS or add features (e.g., email alerts, GUI dashboard, more detection rules), feel free to fork the repo and send a pull request!
+
+---
+
+## License
+
+This project is open source and available under the MIT License.
+
+---
+
+## Author
+
+Developed by Bisma Khushi  
+
+Cybersecurity Student & Freelance Security Developer  
 
 
