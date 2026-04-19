@@ -97,6 +97,25 @@ sudo nmap -sS <target_ip>
 | Phase 2 | Logs sent to Firebase cloud |
 | Phase 3 | Web dashboard displaying alerts |
 
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ffa0357d57825ecc6d9b3507b98b5b99e20449f5/suricata%20code.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ad43ced1b2b1b266c67665c799594fbf7f275009/suricata%20test%20success.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ffa0357d57825ecc6d9b3507b98b5b99e20449f5/suricata%20starting.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ffa0357d57825ecc6d9b3507b98b5b99e20449f5/suricata%20script.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ffa0357d57825ecc6d9b3507b98b5b99e20449f5/summary%20of%20suricata%20script.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ffa0357d57825ecc6d9b3507b98b5b99e20449f5/nmap%20scan.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/904d78a498f1b976763b17a330dafd2eae756a0b/output%20of%20firebase.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/904d78a498f1b976763b17a330dafd2eae756a0b/logs%20sent%20to%20cloud.png)
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/904d78a498f1b976763b17a330dafd2eae756a0b/dashboard.png)
+
 ---
 
 ## Use Cases
