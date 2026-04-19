@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suricata IDS Cloud Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .navbar {
+            background: #020617;
+            padding: 18px;
+            font-size: 26px;
+            text-align: center;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .tabs {
+            display: flex;
+            background: #020617;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .tab.active {
+            background: #1e3a8a;
+            border-bottom: 3px solid #38bdf8;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            color: #38bdf8;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: lime;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px lime;
+            margin-right: 8px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            text-shadow: 0 0 8px #38bdf8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1e293b;
+            margin-top: 15px;
+        }
+
+        th {
+            background: #020617;
+            color: #38bdf8;
+            padding: 12px;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #334155;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">🚨 Suricata IDS Cloud Dashboard</div>
+
+<div class="tabs">
+    <div class="tab active">Overview</div>
+    <div class="tab">Alerts</div>
+    <div class="tab">Evidence Logs</div>
+</div>
+
+<div class="container">
+
+    <div class="cards">
+        <div class="card">
+            <h3>System Status</h3>
+            <p><span class="status-dot"></span> Monitoring Active</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Alerts</h3>
+            <p>{{ alerts|length }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Last Alert</h3>
+            <p>
+                {% if alerts %}
+                    {{ alerts[-1].message }}
+                {% else %}
+                    No Alerts Yet
+                {% endif %}
+            </p>
+        </div>
+    </div>
+
+    <h2>📡 Live Alerts</h2>
+
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Type</th>
+            <th>Message</th>
+        </tr>
+
+        {% for alert in alerts %}
+        <tr>
+            <td>{{ alert.timestamp }}</td>
+            <td>{{ alert.type }}</td>
+            <td>{{ alert.message }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+</body>
+</html>
