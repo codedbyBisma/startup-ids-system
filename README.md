@@ -1,77 +1,68 @@
-# 🚨 Intrusion Detection System using Machine Learning
+Cloud-Based Plug & Play Intrusion Detection System (IDS)
 
-This project demonstrates a simple but effective Intrusion Detection System (IDS) built using the NSL-KDD dataset. The model detects network intrusions using Random Forest Classifier 🔍🌐
+A lightweight, real-time Intrusion Detection System built for small businesses and startups. Monitors network traffic, detects threats, stores logs in the cloud, and displays alerts on a live web dashboard.
 
----
+Project Overview
 
-## 📊 Dataset
+This IDS was built as a freelance security project for a startup client. It provides real-time threat detection, cloud-based log storage, and a simple web dashboard — designed to be easy to deploy with no advanced technical knowledge required.
 
-- **Dataset Name:** NSL-KDD (Improved version of KDD'99)
-- **File Used:** `KDDTrain+.csv`,' KDDTest+.csv'.
+Features
 
-  ## 🧠 Machine Learning Model
-
-- Algorithm: `Random Forest Classifier 🌲`
-- Accuracy: ~95% ✅
-- Feature Encoding: `LabelEncoder`
-- Visualization: `Seaborn`, `Matplotlib`
-
----
-## 🛠️ Tools & Libraries
-
-- Python 🐍
-- Pandas 📊
-- Scikit-learn 🤖
-- Seaborn 🎨
-- Google Colab 💻
-
----
-## 📁 Files in this Repo
-
-| File Name        | Description                       |
-
-|------------------|-----------------------------------|
-
-| `IDS_Model.ipynb`| Main ML Notebook (Google Colab)   |
-
-| `KDDTrain+.csv`  | Training Dataset (Optional)       |
-
-| `README.md`      | You're reading it now 😉          |
-
----
-## 🧪 How to Run
-
-> You can run this directly in Google Colab:
-
-[![Open in Colab](https://colab.research.google.com/drive/1ISXc4IjmIeB98ZHzA7zOV935k3vroAGL#scrollTo=yIofWJMkDmdA)
-
-1. Upload the `KDDTrain+.csv` file
-   
-2. Run each cell step-by-step
-   
-3. See accuracy & confusion matrix 🎯
-
----
-## 📸 Output ScreenShot
-![image alt](https://github.com/user-attachments/assets/0f48b4a4-f8e8-40c1-9857-3bfa322cf0a6)
-![image alt](https://github.com/user-attachments/assets/f7088f4e-6865-482f-8fa0-b16ea6f2bb85)
-![image alt](https://github.com/user-attachments/assets/4924f4ff-651c-499d-bf2e-898801359070)
-![image alt](https://github.com/user-attachments/assets/d5d89521-0c6f-44f4-9626-407b651bcef2)
-![image alt](https://github.com/user-attachments/assets/1ea7725a-406a-40a2-85b6-459b1c6c23d4)
-![image alt](https://github.com/user-attachments/assets/8ab1d1ff-1d44-4ce2-a7bb-d91e24efbf45)
-![image alt](https://github.com/user-attachments/assets/3d2cebf6-a33f-4b50-9882-c9b553a31937)
-
----
-## 🤝 Contributions
-
-Feel free to fork, star ⭐ this repo or suggest improvements!
-
-📄 License
-
-This project is licensed under the [MIT License](LICENSE) - feel free to use, modify, and share with attribution.
+Real-time network monitoring using Suricata IDS engine
+Live alerts with severity levels (HIGH / MEDIUM / LOW)
+Cloud logging via Firebase Realtime Database
+Web dashboard built with Flask to visualize alerts
+Attack detection — port scans, brute force, suspicious connections
+Tamper-proof logs with timestamps
 
 
-💻 Author
+Tech Stack
 
- . Developed by Bisma
+ComponentTechnologyDetection EngineSuricata IDSAlert MonitorPythonCloud StorageFirebase Realtime DatabaseDashboardFlask + HTML/CSSTesting EnvironmentKali LinuxAttack SimulationNmap
+
+Project Structure
+simple_ids/
+├── suricata_ids.py       # Real-time alert monitor
+├── cloud_logger.py       # Firebase cloud logging
+├── app.py                # Flask dashboard backend
+├── templates/
+│   └── dashboard.html    # Frontend dashboard UI
+└── README.md
+
+Note: firebase_key.json is not included for security reasons. Add your own Firebase service account key to run the project.
+
+
+How to Run
+Step 1 — Install Suricata
+bashsudo apt update
+sudo apt install suricata -y
+Step 2 — Start Suricata Monitoring
+bashsudo suricata -c /etc/suricata/suricata.yaml -i eth0
+Step 3 — Run Alert Monitor
+bashsudo python3 suricata_ids.py
+Step 4 — Send Logs to Firebase
+bashpip install firebase-admin
+python3 cloud_logger.py
+Step 5 — Launch Dashboard
+bashpip install flask firebase-admin
+python3 app.py
+Open browser: http://127.0.0.1:5000
+Step 6 — Simulate Attack (Optional)
+bashsudo nmap -sS <target_ip>
+
+Screenshots
+PhaseDescriptionPhase 1Suricata engine running, live alertsPhase 2Logs sent to Firebase cloudPhase 3Web dashboard displaying alerts
+
+Use Cases
+
+Small business network monitoring
+Startup security infrastructure
+Learning intrusion detection concepts
+Real-time threat observation
+
+
+Built By
+Bisma Khushi — Cybersecurity Student & Freelance Security Developer
+bismakhushi07@gmail.com
+https://github.com/codedbyBisma
 
