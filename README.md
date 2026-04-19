@@ -76,7 +76,7 @@ Step 6 — Simulate Attack (Optional)
 sudo nmap -sS <target_ip>
 
 Screenshots
-Phase 1:  Suricata engine running
+Phase 1:  Suricata engine running and live alerts.
 
 ![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ffa0357d57825ecc6d9b3507b98b5b99e20449f5/suricata%20code.png)
 
@@ -91,18 +91,29 @@ Phase 1:  Suricata engine running
 ![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/ffa0357d57825ecc6d9b3507b98b5b99e20449f5/nmap%20scan.png)
 
 
+Phase 2: Logs sent to Firebase Cloud.
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/904d78a498f1b976763b17a330dafd2eae756a0b/output%20of%20firebase.png)
 
-, live alertsPhase 2Logs sent to Firebase cloudPhase 3Web dashboard displaying alerts
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/904d78a498f1b976763b17a330dafd2eae756a0b/logs%20sent%20to%20cloud.png)
+
+Phase 3: Web dashboard displaying alerts
+
+![image alt](https://github.com/codedbyBisma/Startup-IDS-System/blob/904d78a498f1b976763b17a330dafd2eae756a0b/dashboard.png)
 
 Use Cases
 
 Small business network monitoring
+
 Startup security infrastructure
+
 Learning intrusion detection concepts
+
 Real-time threat observation
 
-
 Built By
+
 Bisma Khushi — Cybersecurity Student & Freelance Security Developer
+
 bismakhushi07@gmail.com
-https://github.com/codedbyBisma
+
+
